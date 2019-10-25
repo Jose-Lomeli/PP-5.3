@@ -1,0 +1,44 @@
+public class DogDriver {
+    public static void main (String args[]) {
+        //1. Create a Song, or more
+        Dog someDog = new Dog();
+        Dog dog1 = new Dog("Fang", "Husky",  5, 80.0);
+        Dog dog2 = new Dog("NutMeg", "Austrailian Sheep dog", 12, 45.0);
+        Dog dog3 = new Dog("Rocky", "labrador", 2, 95.5);
+        
+        System.out.println(dog1);
+        System.out.println("");
+        System.out.println(dog2);
+        System.out.println("");
+        System.out.println(dog3);
+        System.out.println("");
+
+       //declared the age of each dogs as String
+        String Aged1 = "11111";
+        String Aged2 = "111111111111";
+        String Aged3 = "11";
+        
+        
+        // compare to
+        
+        
+        if(Aged1.compareTo(Aged2) < 0)
+        {
+            System.out.println("NutMeg is older than Fang.");
+        }
+        else
+        {
+            System.out.println("NutMeg is younger than Fang.");
+        }
+        
+        
+         if(Aged2.compareTo(Aged3) < 0)
+        {
+            System.out.println("Rocky is older than NutMeg.");
+        }
+        else
+        {
+            System.out.println("Rocky is younger than NutMeg.");
+        }
+    }
+}
