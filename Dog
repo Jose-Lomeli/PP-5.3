@@ -1,0 +1,86 @@
+public class Dog
+{
+    private String name;
+    private String breed;
+    private int age;
+    private double weight;
+
+    //2) Constructors
+    //Overloaded constructors (methods) have early binding
+    public Dog()
+    {
+        name = null;
+        breed = null;
+        age = 0;
+        weight = 0.0;
+    }// end zero-arg or default constructor
+
+    public Dog(String newName, String newBreed)
+    {
+        name = newName;
+        breed = newBreed;
+        age = 0;
+        weight = 0.0;
+    }//end three-arg constructor
+
+    public Dog(String newName, String newBreed, int newAge, double newWeight)
+    {
+        name =newName;
+        breed = newBreed;
+        age = checkAge(newAge);
+        weight = newWeight;
+    }//end multi-arg constructor
+
+    //4 Getters
+    public String getName()
+    {
+        return name;
+    }//name getter
+
+    public String getBreed()
+    {
+        return breed;
+    }//breed getter
+    
+    
+
+    //5 Setters
+    public void setName(String newName)
+    {
+        name = newName;
+    }//end name setter
+    public void setBreed(String newBreed)
+    {
+        breed = newBreed;
+    }// end breed setter
+    public void setAge(int newAge)
+    {
+        age = checkAge(newAge);
+    }//end setLength
+    private int checkAge(int newAge)
+    {
+        int tempAge = newAge;
+        if (tempAge < 0)
+        {
+            tempAge = 0;
+        }//end if
+        else if (tempAge >1200)
+        {
+            tempAge = 1200;
+        }//end else if
+        return tempAge;
+    }//end length validation method checkLength
+
+    //3. toString  a must have for every great object class
+    public String toString()
+    {
+        String output = "";
+        output += "Name: " + name;
+        output += "\nBreed: " + breed;
+        output += "\nAge: " + age;
+        output += "\nWeight: " + weight;
+
+        return output;
+    }// end toString
+
+}
